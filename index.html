@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Vitesse Korben">
+<meta name="theme-color" content="#12111a">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; manifest-src blob:; base-uri 'none'; form-action 'none'; connect-src https://api.allorigins.win https://corsproxy.io; frame-ancestors 'none'; object-src 'none';">
+<title>VITESSE — Korben.info</title>
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAZ0lEQVR42mMUEpRiIAUwMZAIWDCFtk80hLM988+jyTIiOwlZKTJA1obQAFeNLI0pyITHMKxOYkI2CS69faIhmtlwLhMeT2P1EsnByoQnTDA9gCWUMBWhiTPhiTWs3qAg4shJGjRJrQAJaS65Hf9gKAAAAABJRU5ErkJggg==">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAArUlEQVR42u1WwQ2AIAwE4gL6dAvGcBpnYRrGcCV/xAAeVw2gCX2S611LW4pe5lXVNKMq2xAo2kTivLPRybYfjKMudlFKLZJBApialLkViNhTiiIACVyd8SUUkeZx7iTAgKDIPgmwbM2aDxoO3zubDRMkIcggOPPtKxCISHmNzzx2UUnIBpNlEEh59vwkS+cAu/SoAZ5M6eSbN8uAAXR6rlssnBYrs9HSHz+73wucyapTyVR+qEAAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADlklEQVR42u3dwVHcQBCFYTFFAnAkC8JwNI7F0TgMp+SDqyjKrHcXLGleT3//ieLAjnp+vWmk0erh+ellAy4xlADkADlADpAD5AA5QA6QA+QAOQBygBwgB8gBcoAcIAeK86gEb/z88fr287fvvxREcoAcIAfIAXKAHCAHyAFygBwgB0AOkAM78ODLWyA5QA6QAyfQdyfY+31f12m7K6xRQ3q/DVxpIcdeQvQUZU05jnaiiSWryXFEJ9G2O1lHjptTuNfMnfZB5Dh2to6ep4kfTY4ac7OqIlXl+Nd8zJ2MzFH1kuPiHORMQPjwVpbjY+kz615lnIvIUe6MrB4hZeSoeyLWHflQ36P5ONTzL+AuK8cCi3dRP9KXlb+KWP3KUq3DGUo5MULC82Mwgx/F5FjVjFp+DGbwo4wcHcyo4scoVL7l/SDHJ2KjG2mHP2JL02STd/LiMpjBj0o9R8OHiDIPOUKO5q1GbEGGc8iB58rhXQUXDz8hPDxlj1Q5xEZyeEgORMohNsLDQ3IgTw7XNvILFZEc1pTMglhWECaHVrREWyo5QA6QA7Xl0HBUaTskB8iBz/OoBNsSD/KT4wwt3v++uSJj4mRML/3NLm/6DaC5PWnfnuPOWne+QTiYwQ9ygBzHJEHP8JAcIAfIAXKAHCDHyXzhymzP6+iSA+T4jyRoe/utb3LcOeWdb8yOiVMSdc8z04y5N7G77+f4U3Gbfchh7dBzgBxYUI60r0WLZfqWSskBcoAcKC+HtiO/4ZAciJdDeGQWZJocLkrmF8qygkg5tKWxrajkQLYcwiM2NiQHsuUQHpmxseW/rrynGZJjizpLovDF+MIj/ZBH5rnSyo/Yt3EHJUdPP5Lf0561rHivrGVF81HjANNfV76wH8kLSm5ydPAj34zcZWVtP0qYEd1zrOpHFTPSG9L1/ChkxrZtD89PL+Va+or/8VY8igK37D8WsVyEFPW7xn6O0n7UTb4Cy8p1IZILXW7AheWodSIu0CrVkyP/jKweGLXluNJzzJ2DzFG1k+NmW3rmfIQMgxxZc7OqFuvIcec/t3vN1mkfRI6zFfnCFB7xN8lRQJG9WHIP25pynGbJ2vsaF5fjCFH6bHRtJIdOghzYDU/ZgxwgB3bE+1Yut6ge/JccIAfIAXKAHCAHyAFygBwgB8gBkAPkwD7YCQbJAXKAHCAHyAFygBwgB8gBcgDkADlADpAD5AA5QA6QA8vyGwo8nBUu45aHAAAAAElFTkSuQmCC">
+<link rel="manifest" id="manifestLink">
+<style>
+  :root{
+    --bg:        #12111a;
+    --bg-glow:   #241f36;
+    --panel:     #1a1826;
+    --panel-2:   #201d2e;
+    --line:      #322d44;
+    --text:      #e9e6f2;
+    --text-dim:  #948da8;
+    --text-mute: #635c78;
+    --brass:     #c9a24b;
+    --brass-dim: #7d6631;
+    --rose:      #a9647a;
+    --font-display: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'New York', serif;
+    --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', 'Roboto Mono', Menlo, Consolas, monospace;
+    --font-ui: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body[data-theme="light"]{
+    --bg:        #f4f1e8;
+    --bg-glow:   #fff9ec;
+    --panel:     #ffffff;
+    --panel-2:   #eee9db;
+    --line:      #ddd5bf;
+    --text:      #221f2b;
+    --text-dim:  #5c5468;
+    --text-mute: #96896f;
+    --brass:     #a97c2f;
+    --brass-dim: #c9a24b;
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0; min-height:100vh;
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, var(--bg-glow) 0%, transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--font-ui);
+    -webkit-font-smoothing:antialiased;
+    transition:background .2s ease, color .2s ease;
+  }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:calc(env(safe-area-inset-top) + 32px) 24px 64px;
+    min-height:100svh;
+  }
+
+  header{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:22px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:18px;
+  }
+  .brand{
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--brass);
+  }
+  h1{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:30px;
+    margin:0;
+    letter-spacing:.01em;
+  }
+  .tagline{
+    font-size:12px;
+    color:var(--text-mute);
+    font-family:var(--font-mono);
+  }
+
+  /* ---- disclosure panels (réglages / bibliothèque) ---- */
+  details.panel{
+    margin-bottom:14px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--panel);
+  }
+  details.panel summary{
+    cursor:pointer;
+    padding:12px 14px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+  details.panel summary::-webkit-details-marker{ display:none; }
+  details.panel summary::after{ content:"+"; color:var(--text-mute); font-family:var(--font-ui); font-size:14px; }
+  details.panel[open] summary::after{ content:"–"; }
+  details.panel summary:hover{ color:var(--brass); }
+  .panel-body{ padding:2px 14px 14px; }
+
+  .count-badge{
+    color:var(--text-mute);
+    font-size:10px;
+  }
+
+  .settings-row{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:8px;
+  }
+  .settings-row:first-child{ margin-top:0; }
+  .group-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-mute);
+    min-width:56px;
+  }
+  button.toggle-btn{ min-width:40px; }
+  button.toggle-btn.active{
+    background:var(--brass);
+    border-color:var(--brass);
+    color:#1a1509;
+  }
+
+  /* ---- resume banner ---- */
+  .resume-banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    background:var(--panel);
+    border:1px solid var(--brass-dim);
+    border-radius:4px;
+    padding:12px 14px;
+    margin-bottom:14px;
+    font-size:13px;
+  }
+  .resume-banner[hidden]{ display:none; }
+  .rb-text{
+    color:var(--text-dim);
+    font-size:12px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    flex:1;
+    min-width:0;
+  }
+  .rb-actions{ display:flex; gap:8px; flex-shrink:0; }
+
+  /* ---- reading stage ---- */
+  .stage{
+    position:relative;
+    background:linear-gradient(180deg, var(--panel), var(--panel-2));
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:56px 20px 40px;
+    overflow:hidden;
+    touch-action:manipulation;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+  .stage::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(180deg, transparent 0 39px, rgba(255,255,255,.012) 39px 40px);
+    pointer-events:none;
+  }
+
+  .reticle{
+    position:relative;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .tick{
+    position:absolute;
+    left:50%;
+    width:1px;
+    background:var(--brass-dim);
+  }
+  .tick.top{ top:6px; height:14px; }
+  .tick.bottom{ bottom:6px; height:14px; }
+
+  .word-line{
+    font-family:var(--font-mono);
+    font-size:clamp(28px, 6vw, 46px);
+    font-weight:500;
+    white-space:nowrap;
+    letter-spacing:.01em;
+    display:flex;
+    line-height:1;
+  }
+  body[data-word-size="sm"] .word-line{ font-size:clamp(20px, 4.5vw, 32px); }
+  body[data-word-size="lg"] .word-line{ font-size:clamp(34px, 7vw, 58px); }
+  body[data-word-size="xl"] .word-line{ font-size:clamp(40px, 8.5vw, 72px); }
+
+  .w-pre, .w-post{ color:var(--text); }
+  .w-pivot{ color:var(--brass); position:relative; }
+  .w-pivot::after{
+    content:"";
+    position:absolute;
+    left:50%; transform:translateX(-50%);
+    bottom:-14px;
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--brass);
+    opacity:.85;
+  }
+  .w-pre{ text-align:right; }
+  .w-post{ text-align:left; }
+
+  .placeholder{
+    font-family:var(--font-ui);
+    font-size:14px;
+    color:var(--text-mute);
+    text-align:center;
+  }
+
+  .progress-track{
+    height:2px;
+    background:var(--line);
+    margin:26px 20px 0;
+    position:relative;
+    border-radius:2px;
+    overflow:hidden;
+  }
+  .progress-fill{
+    position:absolute; inset:0 auto 0 0;
+    width:0%;
+    background:var(--brass-dim);
+  }
+
+  .meta-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 20px 0;
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-mute);
+    letter-spacing:.04em;
+  }
+
+  /* ---- controls ---- */
+  .controls{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    margin-top:22px;
+    flex-wrap:wrap;
+  }
+  .transport{ display:flex; align-items:center; gap:8px; }
+  .secondary{ display:flex; align-items:center; gap:10px; }
+
+  button{
+    font-family:var(--font-ui);
+    font-size:13px;
+    font-weight:500;
+    color:var(--text);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:9px 14px;
+    cursor:pointer;
+    transition:border-color .15s ease, background .15s ease, color .15s ease;
+  }
+  button:hover{ border-color:var(--brass-dim); color:var(--brass); }
+  button:focus-visible{ outline:2px solid var(--brass); outline-offset:2px; }
+  button:active{ transform:translateY(1px); }
+  button.primary{
+    background:var(--brass);
+    border-color:var(--brass);
+    color:#1a1509;
+    min-width:64px;
+  }
+  button.primary:hover{ background:#dcb35c; color:#1a1509; }
+  button.icon{ font-family:var(--font-mono); }
+  button.ghost{
+    background:none;
+    border-color:transparent;
+    color:var(--text-mute);
+    padding:9px 6px;
+  }
+  button.ghost:hover{ color:var(--brass); border-color:transparent; }
+  button.ghost-step{
+    background:none;
+    border-color:transparent;
+    color:var(--text-dim);
+    font-size:18px;
+    padding:9px 10px;
+  }
+  button.ghost-step:hover{ color:var(--brass); border-color:transparent; }
+
+  .wpm-group{
+    display:flex; align-items:center; gap:6px;
+    font-family:var(--font-mono);
+    color:var(--text-dim);
+    font-size:13px;
+  }
+  .wpm-value{ color:var(--text); min-width:64px; text-align:center; }
+
+  /* ---- source panel ---- */
+  .source{
+    margin-top:28px;
+    border-top:1px solid var(--line);
+    padding-top:22px;
+  }
+  .source-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--text-mute);
+    margin-bottom:10px;
+    display:block;
+  }
+  .source-row{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+  }
+  textarea, input[type="text"]{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:4px;
+    color:var(--text);
+    font-family:var(--font-ui);
+    font-size:13px;
+    padding:10px 12px;
+  }
+  textarea{
+    flex:1;
+    resize:vertical;
+    min-height:44px;
+    line-height:1.5;
+  }
+  textarea:focus-visible, input[type="text"]:focus-visible{ outline:2px solid var(--brass); outline-offset:1px; }
+  textarea::placeholder, input[type="text"]::placeholder{ color:var(--text-mute); }
+
+  input[type="file"]{ display:none; }
+  label.file-btn{
+    font-family:var(--font-ui);
+    font-size:13px;
+    font-weight:500;
+    color:var(--text-dim);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:9px 14px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  label.file-btn:hover{ border-color:var(--brass-dim); color:var(--brass); }
+
+  .hint{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 16px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-mute);
+    margin-top:12px;
+    letter-spacing:.02em;
+  }
+  .hint span{ white-space:nowrap; }
+  .hint kbd{
+    font-family:var(--font-mono);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:1px 5px;
+    color:var(--text-dim);
+  }
+  .hint-touch{ display:none; }
+  @media (hover:none) and (pointer:coarse){
+    .hint-keys{ display:none; }
+    .hint-touch{ display:flex; }
+  }
+
+  /* ---- library ---- */
+  .library{
+    margin-top:26px;
+  }
+  .library-save-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:12px;
+  }
+  .library-save-row input[type="text"]{ flex:1; }
+  .library-list{ display:flex; flex-direction:column; gap:8px; }
+  .library-empty{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-mute);
+  }
+  .library-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:8px 10px;
+  }
+  .li-info{ flex:1; min-width:0; }
+  .li-title{
+    font-size:13px;
+    color:var(--text);
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .li-meta{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--text-mute);
+  }
+  .li-actions{ display:flex; gap:6px; flex-shrink:0; }
+
+  /* ---- korben.info article list ---- */
+  .korben-toolbar{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:12px;
+  }
+  .korben-status{
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-mute);
+  }
+  .korben-list{ display:flex; flex-direction:column; gap:8px; max-height:420px; overflow-y:auto; }
+  .korben-empty{
+    font-family:var(--font-mono);
+    font-size:12px;
+    color:var(--text-mute);
+  }
+  .korben-item{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:10px 12px;
+    cursor:pointer;
+    font-family:var(--font-ui);
+  }
+  .korben-item:hover{ border-color:var(--brass-dim); }
+  .korben-item:focus-visible{ outline:2px solid var(--brass); outline-offset:2px; }
+  .ki-title{
+    font-size:13px;
+    font-weight:500;
+    color:var(--text);
+    margin-bottom:3px;
+  }
+  .ki-meta{
+    font-family:var(--font-mono);
+    font-size:10px;
+    color:var(--text-mute);
+    margin-bottom:5px;
+  }
+  .ki-excerpt{
+    font-size:12px;
+    color:var(--text-dim);
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .korben-source-note{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:8px 12px;
+    margin-bottom:14px;
+    font-size:12px;
+    color:var(--text-dim);
+  }
+  .korben-source-note a{ color:var(--brass); text-decoration:none; }
+  .korben-source-note a:hover{ text-decoration:underline; }
+
+  footer{
+    margin-top:36px;
+    font-family:var(--font-mono);
+    font-size:11px;
+    color:var(--text-mute);
+    text-align:center;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    * { transition:none !important; }
+  }
+
+  /* ---- small phone screens, portrait ---- */
+  @media (max-width: 480px){
+    .wrap{ padding:calc(env(safe-area-inset-top) + 22px) 14px 40px; }
+    h1{ font-size:24px; }
+    .stage{ padding:40px 10px 28px; }
+    .source-row{ flex-direction:column; }
+    label.file-btn{ text-align:center; }
+    #loadPasteBtn{ align-self:stretch; }
+    .controls{ flex-direction:column; align-items:stretch; gap:14px; }
+    .transport{ justify-content:center; }
+    .transport button{ flex:1; min-height:46px; font-size:16px; }
+    .secondary{ justify-content:space-between; }
+    button{ padding:11px 13px; min-height:44px; }
+    .resume-banner{ flex-direction:column; align-items:stretch; }
+    .rb-text{ white-space:normal; }
+    .library-save-row{ flex-direction:column; }
+  }
+
+  /* ---- tap hint shown briefly on entering immersive landscape ---- */
+  .tap-hint{
+    position:absolute;
+    left:50%; bottom:14px;
+    transform:translateX(-50%);
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.04em;
+    color:var(--text-mute);
+    background:rgba(18,17,26,.7);
+    padding:6px 12px;
+    border-radius:20px;
+    border:1px solid var(--line);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .4s ease;
+    white-space:nowrap;
+  }
+  body.show-hint .tap-hint{ opacity:1; }
+
+  /* ---- immersive mode: phone rotated to landscape ----
+     only the reading frame remains, everything else hides,
+     tap/swipe on the frame replaces the buttons. */
+  @media (orientation: landscape) and (max-height: 520px){
+    header, details.panel, .resume-banner, .controls, .source, footer{ display:none; }
+    .wrap{
+      padding:0;
+      max-width:none;
+      min-height:100svh;
+    }
+    .stage{
+      position:fixed;
+      inset:0;
+      border:none;
+      border-radius:0;
+      padding:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .reticle{ height:auto; flex:1; }
+    .word-line{ font-size:clamp(32px, 8vw, 64px); }
+    .meta-row{
+      position:absolute;
+      right:calc(env(safe-area-inset-right) + 14px);
+      bottom:calc(env(safe-area-inset-bottom) + 10px);
+      left:auto;
+      background:rgba(18,17,26,.55);
+      border-radius:4px;
+      padding:4px 8px;
+      gap:10px;
+    }
+    .progress-track{
+      position:absolute;
+      left:0; right:0; bottom:0;
+      margin:0;
+      height:3px;
+      border-radius:0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="eyebrow">RSVP · lecture mot-à-mot</span>
+      <h1>VITESSE</h1>
+      <span class="tagline">les derniers articles de Korben.info, au point de fixation optimal</span>
+    </div>
+  </header>
+
+  <details class="panel" id="korbenDetails" open>
+    <summary>Articles Korben.info <span class="count-badge" id="korbenCount"></span></summary>
+    <div class="panel-body">
+      <div class="korben-toolbar">
+        <button class="ghost" id="korbenRefreshBtn">Actualiser</button>
+        <span class="korben-status" id="korbenStatus"></span>
+      </div>
+      <div class="korben-list" id="korbenList"></div>
+    </div>
+  </details>
+
+  <details class="panel" id="settingsDetails">
+    <summary>Réglages</summary>
+    <div class="panel-body">
+      <div class="settings-row">
+        <span class="group-label">Taille</span>
+        <button class="toggle-btn" data-size="sm">S</button>
+        <button class="toggle-btn" data-size="md">M</button>
+        <button class="toggle-btn" data-size="lg">L</button>
+        <button class="toggle-btn" data-size="xl">XL</button>
+      </div>
+      <div class="settings-row">
+        <span class="group-label">Thème</span>
+        <button class="toggle-btn" data-theme-btn="dark">Sombre</button>
+        <button class="toggle-btn" data-theme-btn="light">Clair</button>
+      </div>
+    </div>
+  </details>
+
+  <div class="resume-banner" id="resumeBanner" hidden>
+    <span class="rb-text" id="resumeText"></span>
+    <div class="rb-actions">
+      <button class="ghost" id="resumeDismissBtn">Ignorer</button>
+      <button class="primary" id="resumeBtn">Reprendre</button>
+    </div>
+  </div>
+
+  <div class="korben-source-note" id="korbenSourceNote" hidden>
+    <span id="korbenSourceText"></span>
+    <a id="korbenSourceLink" href="#" target="_blank" rel="noopener noreferrer">korben.info ↗</a>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="reticle">
+      <div class="tick top"></div>
+      <div class="tick bottom"></div>
+      <div id="wordLine" class="word-line" style="display:none">
+        <span class="w-pre" id="wPre"></span><span class="w-pivot" id="wPivot"></span><span class="w-post" id="wPost"></span>
+      </div>
+      <div id="placeholder" class="placeholder">choisissez un article Korben.info ci-dessus, ou chargez votre propre texte plus bas</div>
+    </div>
+
+    <div class="tap-hint" id="tapHint">touchez pour lire/pause · glissez pour changer de phrase</div>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="meta-row">
+      <span id="sentenceLabel">phrase 0 / 0</span>
+      <span id="timeLeftLabel">— restant</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="transport">
+      <button class="icon ghost-step" id="wordBackBtn" title="Mot précédent">‹</button>
+      <button class="icon" id="backBtn" title="Phrase précédente">⏮</button>
+      <button class="primary" id="playBtn" aria-label="Lecture">▶</button>
+      <button class="icon" id="fwdBtn" title="Phrase suivante">⏭</button>
+      <button class="icon ghost-step" id="wordFwdBtn" title="Mot suivant">›</button>
+    </div>
+
+    <div class="secondary">
+      <div class="wpm-group">
+        <button class="icon" id="slowerBtn" aria-label="Ralentir" title="Ralentir">−</button>
+        <span class="wpm-value" id="wpmValue">200 mpm</span>
+        <button class="icon" id="fasterBtn" aria-label="Accélérer" title="Accélérer">+</button>
+      </div>
+      <button class="ghost" id="resetBtn">Recommencer</button>
+    </div>
+  </div>
+
+  <div class="source">
+    <span class="source-label">Ou collez votre propre texte</span>
+    <div class="source-row">
+      <label class="file-btn" for="fileInput">Choisir un fichier .txt</label>
+      <input type="file" id="fileInput" accept=".txt,text/plain">
+      <textarea id="pasteArea" rows="2" placeholder="…ou collez votre texte ici"></textarea>
+      <button id="loadPasteBtn" class="primary">Charger</button>
+    </div>
+    <div class="hint hint-keys">
+      <span><kbd>espace</kbd> lecture/pause</span>
+      <span><kbd>←</kbd> <kbd>→</kbd> phrase</span>
+      <span><kbd>⇧</kbd>+<kbd>←</kbd> <kbd>→</kbd> mot</span>
+      <span><kbd>↑</kbd> <kbd>↓</kbd> vitesse</span>
+    </div>
+    <div class="hint hint-touch">
+      <span>toucher le cadre : lecture/pause</span>
+      <span>glisser : phrase suivante/précédente</span>
+      <span>‹ › : mot précédent/suivant</span>
+    </div>
+  </div>
+
+  <details class="panel library" id="libraryDetails">
+    <summary>Bibliothèque <span class="count-badge" id="libraryCount"></span></summary>
+    <div class="panel-body">
+      <div class="library-save-row">
+        <input type="text" id="librarySaveTitle" placeholder="Titre (optionnel)">
+        <button id="librarySaveBtn">Enregistrer le texte actuel</button>
+      </div>
+      <div class="library-list" id="libraryList"></div>
+    </div>
+  </details>
+
+  <footer>vitesse · lecteur RSVP autonome, inspiré de spread0r (Peter Feuerer, GPL-2.0)</footer>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- state ----------
+  let sentences = [];      // array of arrays of words
+  let sIdx = -1;           // current sentence index
+  let wIdx = -1;           // current word index within sentence
+  let wpm = parseInt(localStorage.getItem('vitesse_wpm')) || 200;
+  let playing = false;
+  let timerId = null;
+  let totalWords = 0;
+  let wordsConsumed = 0;
+  let currentRawText = '';
+  let currentSourceTitle = '';
+  let currentSourceLink = '';
+  let lastSaveTime = 0;
+
+  // ---------- dom ----------
+  const els = {
+    wordLine: document.getElementById('wordLine'),
+    placeholder: document.getElementById('placeholder'),
+    wPre: document.getElementById('wPre'),
+    wPivot: document.getElementById('wPivot'),
+    wPost: document.getElementById('wPost'),
+    playBtn: document.getElementById('playBtn'),
+    backBtn: document.getElementById('backBtn'),
+    fwdBtn: document.getElementById('fwdBtn'),
+    wordBackBtn: document.getElementById('wordBackBtn'),
+    wordFwdBtn: document.getElementById('wordFwdBtn'),
+    slowerBtn: document.getElementById('slowerBtn'),
+    fasterBtn: document.getElementById('fasterBtn'),
+    wpmValue: document.getElementById('wpmValue'),
+    sentenceLabel: document.getElementById('sentenceLabel'),
+    timeLeftLabel: document.getElementById('timeLeftLabel'),
+    progressFill: document.getElementById('progressFill'),
+    fileInput: document.getElementById('fileInput'),
+    pasteArea: document.getElementById('pasteArea'),
+    resetBtn: document.getElementById('resetBtn'),
+    stage: document.getElementById('stage'),
+    tapHint: document.getElementById('tapHint'),
+    loadPasteBtn: document.getElementById('loadPasteBtn'),
+    resumeBanner: document.getElementById('resumeBanner'),
+    resumeText: document.getElementById('resumeText'),
+    resumeBtn: document.getElementById('resumeBtn'),
+    resumeDismissBtn: document.getElementById('resumeDismissBtn'),
+    librarySaveTitle: document.getElementById('librarySaveTitle'),
+    librarySaveBtn: document.getElementById('librarySaveBtn'),
+    libraryList: document.getElementById('libraryList'),
+    libraryCount: document.getElementById('libraryCount'),
+    korbenDetails: document.getElementById('korbenDetails'),
+    korbenRefreshBtn: document.getElementById('korbenRefreshBtn'),
+    korbenStatus: document.getElementById('korbenStatus'),
+    korbenList: document.getElementById('korbenList'),
+    korbenCount: document.getElementById('korbenCount'),
+    korbenSourceNote: document.getElementById('korbenSourceNote'),
+    korbenSourceText: document.getElementById('korbenSourceText'),
+    korbenSourceLink: document.getElementById('korbenSourceLink'),
+  };
+
+  updateWpmLabel();
+
+  // ---------- sentence segmentation, with French-abbreviation protection ----------
+  const ABBR = ['m','mm','mme','mlle','mgr','dr','pr','me','st','ste','sts','stes',
+    'jr','sr','cf','ex','etc','art','ch','vol','p','pp','n','no','av','apr','env',
+    'min','max','tel','tél','ref','réf','dép','vs','fig','ibid','op','cit','trad','éd','coll','al'];
+  // \b is ASCII-only in JS (word char = [A-Za-z0-9_]), so it never matches right
+  // before an accented letter like the "é" in "éd." — that abbreviation silently
+  // never matched. A Unicode-aware boundary ([^\p{L}\p{N}_] or string start) fixes it.
+  const abbrPattern = new RegExp('(^|[^\\p{L}\\p{N}_])(' + ABBR.join('|') + ')\\.', 'giu');
+
+  function protectPeriods(text){
+    text = text.replace(/\.\.\./g, '\u0001');
+    text = text.replace(/(\d)\.(\d)/g, '$1\u0002$2');
+    text = text.replace(abbrPattern, (m, pre, word) => pre + word + '\u0003');
+    return text;
+  }
+  function restorePeriods(s){
+    return s.replace(/\u0001/g, '...').replace(/\u0002/g, '.').replace(/\u0003/g, '.');
+  }
+
+  // ---------- text loading ----------
+  function loadText(raw, resumeState){
+    hideResumeBanner();
+    currentRawText = raw;
+    els.librarySaveBtn.disabled = !raw.trim();
+
+    if (resumeState && resumeState.sourceTitle){
+      currentSourceTitle = resumeState.sourceTitle;
+      currentSourceLink = resumeState.sourceLink || '';
+      els.korbenSourceNote.hidden = false;
+      els.korbenSourceText.textContent = currentSourceTitle;
+      els.korbenSourceLink.href = currentSourceLink || 'https://korben.info';
+    } else {
+      currentSourceTitle = '';
+      currentSourceLink = '';
+      els.korbenSourceNote.hidden = true;
+    }
+
+    const cleaned = raw.replace(/[\r\n]+/g, ' ').trim();
+    const protectedText = protectPeriods(cleaned);
+    const rough = protectedText.match(/[^.!?]+[.!?]*/g) || [];
+    sentences = rough
+      .map(s => restorePeriods(s).trim())
+      .filter(s => s.length > 0)
+      .map(s => s.split(/\s+/).filter(Boolean));
+
+    totalWords = sentences.reduce((a, s) => a + s.length, 0);
+
+    if (sentences.length === 0){
+      wordsConsumed = 0; sIdx = 0; wIdx = -1;
+      pause();
+      els.placeholder.style.display = 'block';
+      els.placeholder.textContent = 'aucun texte lisible trouvé dans ce fichier';
+      els.wordLine.style.display = 'none';
+      return;
+    }
+
+    els.placeholder.style.display = 'none';
+    els.wordLine.style.display = 'flex';
+
+    const resumeIsValid = resumeState
+      && Number.isFinite(resumeState.sIdx)
+      && Number.isFinite(resumeState.wIdx)
+      && resumeState.sIdx >= 0 && resumeState.wIdx >= -1;
+
+    if (resumeIsValid){
+      sIdx = Math.max(0, Math.min(resumeState.sIdx, sentences.length - 1));
+      if (resumeState.wIdx === -1){
+        // saved before the first word was ever shown (text loaded, never played):
+        // sentences[sIdx][-1] would be undefined, so fall back to the filler state
+        // instead of indexing with -1.
+        wIdx = -1;
+        wordsConsumed = 0;
+        showWord(fillerWord());
+      } else {
+        wIdx = Math.max(0, Math.min(resumeState.wIdx, sentences[sIdx].length - 1));
+        wordsConsumed = Math.min(Math.max(resumeState.wordsConsumed || 0, 0), totalWords);
+        showWord(sentences[sIdx][wIdx]);
+      }
+      if (Number.isFinite(resumeState.wpm) && resumeState.wpm > 0){
+        wpm = resumeState.wpm;
+        updateWpmLabel();
+      }
+      pause();
+    } else {
+      wordsConsumed = 0;
+      sIdx = 0;
+      wIdx = -1;
+      pause();
+      showWord(fillerWord());
+    }
+    updateMeta();
+  }
+
+  function fillerWord(){ return '·'; }
+
+  // ---------- ORP (optimal recognition point) ----------
+  function pivotIndex(word){
+    const len = word.length;
+    if (len <= 1) return 0;
+    const vowels = /[aeiouyàâäéèêëîïôöùûüAEIOUYÀÂÄÉÈÊËÎÏÔÖÙÛÜ]/;
+    let found = -1;
+    const start = Math.floor(len * 0.2);
+    const end = Math.floor(len / 2);
+    for (let i = start; i < end; i++){
+      if (vowels.test(word[i])) found = i;
+    }
+    if (found === -1) found = Math.floor(len / 2);
+    return found;
+  }
+
+  function showWord(word){
+    const p = pivotIndex(word);
+    els.wPre.textContent = word.slice(0, p);
+    els.wPivot.textContent = word.slice(p, p + 1);
+    els.wPost.textContent = word.slice(p + 1);
+  }
+
+  // ---------- timing ----------
+  function delayForWord(word){
+    const base = 60000 / wpm;
+    let delay = base;
+    const len = word.length;
+    if (len > 6) delay += (base / 5) * (len - 6);
+    if (/,$/.test(word)) delay += base / 2;
+    if (/[.!?;][»"']*$/.test(word)) delay += base * 1.5;
+    return delay;
+  }
+
+  // ---------- navigation helpers ----------
+  function globalIndex(s, w){
+    let idx = 0;
+    for (let i = 0; i < s; i++) idx += sentences[i].length;
+    return idx + w;
+  }
+  function fromGlobalIndex(idx){
+    idx = Math.max(0, Math.min(totalWords - 1, idx));
+    let s = 0;
+    while (idx >= sentences[s].length){ idx -= sentences[s].length; s++; }
+    return { s, w: idx };
+  }
+
+  function nextWord(){
+    if (sIdx >= sentences.length) return null;
+    wIdx++;
+    if (wIdx >= sentences[sIdx].length){
+      sIdx++;
+      wIdx = 0;
+      if (sIdx >= sentences.length){
+        pause();
+        showWord('— fin du texte —');
+        return null;
+      }
+    }
+    // running counter rather than recomputing globalIndex() every word:
+    // avoids an O(sentences) rescan on every tick during playback.
+    wordsConsumed++;
+    return sentences[sIdx][wIdx];
+  }
+
+  function tick(){
+    const word = nextWord();
+    updateMeta();
+    if (word === null) return;
+    showWord(word);
+    saveProgress(false);
+    const delay = delayForWord(word);
+    timerId = setTimeout(() => { if (playing) tick(); }, delay);
+  }
+
+  function play(){
+    if (sentences.length === 0) return;
+    if (sIdx >= sentences.length){ sIdx = 0; wIdx = -1; wordsConsumed = 0; }
+    playing = true;
+    els.playBtn.textContent = '❚❚';
+    els.playBtn.setAttribute('aria-label', 'Pause');
+    tick();
+  }
+
+  function pause(){
+    playing = false;
+    els.playBtn.textContent = '▶';
+    els.playBtn.setAttribute('aria-label', 'Lecture');
+    if (timerId) clearTimeout(timerId);
+  }
+
+  function togglePlay(){ playing ? pause() : play(); }
+
+  function jumpSentence(delta){
+    if (sentences.length === 0) return;
+    pause();
+    sIdx = Math.max(0, Math.min(sentences.length - 1, sIdx + delta));
+    // wIdx=0 (not -1) to match the word just shown below — otherwise pressing
+    // Play right after a jump re-displays this same first word before advancing.
+    wIdx = 0;
+    wordsConsumed = globalIndex(sIdx, 0) + 1;
+    showWord(sentences[sIdx][0] || fillerWord());
+    updateMeta();
+    saveProgress(true);
+  }
+
+  function stepWord(delta){
+    if (sentences.length === 0) return;
+    pause();
+    const cur = (wIdx === -1) ? -1 : globalIndex(sIdx, wIdx);
+    const next = Math.max(0, cur + delta);
+    const { s, w } = fromGlobalIndex(next);
+    sIdx = s; wIdx = w;
+    wordsConsumed = globalIndex(s, w) + 1;
+    showWord(sentences[sIdx][wIdx]);
+    updateMeta();
+    saveProgress(true);
+  }
+
+  function changeSpeed(delta){
+    wpm = Math.max(40, Math.min(1000, wpm + delta));
+    localStorage.setItem('vitesse_wpm', wpm);
+    updateWpmLabel();
+    saveProgress(true);
+  }
+
+  function updateWpmLabel(){
+    els.wpmValue.textContent = wpm + ' mpm';
+  }
+
+  function updateMeta(){
+    els.sentenceLabel.textContent = `phrase ${sentences.length ? sIdx + 1 : 0} / ${sentences.length}`;
+    const remaining = Math.max(0, totalWords - wordsConsumed);
+    const secs = Math.round((remaining * 60) / wpm);
+    const m = Math.floor(secs / 60), s = secs % 60;
+    els.timeLeftLabel.textContent = totalWords ? `~${m}:${String(s).padStart(2,'0')} restant` : '— restant';
+    const pct = totalWords ? Math.min(100, (wordsConsumed / totalWords) * 100) : 0;
+    els.progressFill.style.width = pct + '%';
+  }
+
+  // ---------- resume (reprise automatique) ----------
+  function saveProgress(force){
+    if (!currentRawText || sentences.length === 0) return;
+    const now = Date.now();
+    if (!force && now - lastSaveTime < 1000) return;
+    lastSaveTime = now;
+    try{
+      localStorage.setItem('vitesse_last', JSON.stringify({
+        text: currentRawText,
+        sIdx, wIdx, wordsConsumed, wpm,
+        sourceTitle: currentSourceTitle, sourceLink: currentSourceLink,
+        savedAt: now
+      }));
+    }catch(e){ /* storage full or unavailable: fail silently */ }
+  }
+
+  function hideResumeBanner(){
+    els.resumeBanner.hidden = true;
+  }
+
+  function timeAgoLabel(ts){
+    const mins = Math.round((Date.now() - ts) / 60000);
+    if (mins < 1) return "à l'instant";
+    if (mins < 60) return `il y a ${mins} min`;
+    const hrs = Math.round(mins / 60);
+    if (hrs < 24) return `il y a ${hrs} h`;
+    return `il y a ${Math.round(hrs / 24)} j`;
+  }
+
+  function checkResume(){
+    let saved;
+    try{ saved = JSON.parse(localStorage.getItem('vitesse_last') || 'null'); }catch(e){ saved = null; }
+    if (!saved || !saved.text) return;
+    const preview = saved.text.trim().slice(0, 70).replace(/\s+/g, ' ');
+    els.resumeText.textContent = `« ${preview}${saved.text.length > 70 ? '…' : ''} » · ${timeAgoLabel(saved.savedAt)}`;
+    els.resumeBanner.hidden = false;
+    els.resumeBtn.onclick = () => {
+      loadText(saved.text, {
+        sIdx: saved.sIdx, wIdx: saved.wIdx, wordsConsumed: saved.wordsConsumed, wpm: saved.wpm,
+        sourceTitle: saved.sourceTitle, sourceLink: saved.sourceLink
+      });
+    };
+    els.resumeDismissBtn.onclick = hideResumeBanner;
+  }
+
+  // ---------- settings (display customization) ----------
+  function loadSettings(){
+    let s;
+    try{ s = JSON.parse(localStorage.getItem('vitesse_settings') || 'null'); }catch(e){ s = null; }
+    return Object.assign({ wordSize: 'md', theme: 'dark' }, s || {});
+  }
+  function saveSettings(s){
+    localStorage.setItem('vitesse_settings', JSON.stringify(s));
+  }
+  function applySettings(s){
+    document.body.setAttribute('data-word-size', s.wordSize);
+    document.body.setAttribute('data-theme', s.theme);
+    document.querySelectorAll('[data-size]').forEach(b => b.classList.toggle('active', b.dataset.size === s.wordSize));
+    document.querySelectorAll('[data-theme-btn]').forEach(b => b.classList.toggle('active', b.dataset.themeBtn === s.theme));
+  }
+
+  let settings = loadSettings();
+  applySettings(settings);
+
+  document.querySelectorAll('[data-size]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      settings.wordSize = btn.dataset.size;
+      saveSettings(settings);
+      applySettings(settings);
+    });
+  });
+  document.querySelectorAll('[data-theme-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      settings.theme = btn.dataset.themeBtn;
+      saveSettings(settings);
+      applySettings(settings);
+    });
+  });
+
+  // ---------- library (multiple saved texts) ----------
+  function loadLibrary(){
+    try{ return JSON.parse(localStorage.getItem('vitesse_library') || '[]'); }catch(e){ return []; }
+  }
+  function saveLibrary(list){
+    localStorage.setItem('vitesse_library', JSON.stringify(list));
+  }
+  function renderLibrary(){
+    const list = loadLibrary();
+    els.libraryCount.textContent = list.length ? `(${list.length})` : '';
+    if (list.length === 0){
+      els.libraryList.innerHTML = '<div class="library-empty">aucun texte enregistré</div>';
+      return;
+    }
+    els.libraryList.innerHTML = '';
+    list.slice().sort((a,b) => b.savedAt - a.savedAt).forEach(item => {
+      const row = document.createElement('div');
+      row.className = 'library-item';
+
+      const info = document.createElement('div');
+      info.className = 'li-info';
+      const title = document.createElement('div');
+      title.className = 'li-title';
+      title.textContent = item.title || '(sans titre)';
+      const meta = document.createElement('div');
+      meta.className = 'li-meta';
+      meta.textContent = `${item.text.split(/\s+/).filter(Boolean).length} mots · ${timeAgoLabel(item.savedAt)}`;
+      info.appendChild(title); info.appendChild(meta);
+
+      const actions = document.createElement('div');
+      actions.className = 'li-actions';
+      const loadBtn = document.createElement('button');
+      loadBtn.className = 'icon'; loadBtn.textContent = 'Charger';
+      loadBtn.addEventListener('click', () => { loadText(item.text); });
+      const delBtn = document.createElement('button');
+      delBtn.className = 'ghost'; delBtn.textContent = '✕';
+      delBtn.title = 'Supprimer';
+      delBtn.setAttribute('aria-label', 'Supprimer ' + (item.title || 'ce texte'));
+      delBtn.addEventListener('click', () => {
+        if (!confirm(`Supprimer « ${item.title || '(sans titre)'} » de la bibliothèque ?`)) return;
+        saveLibrary(loadLibrary().filter(x => x.id !== item.id));
+        renderLibrary();
+      });
+      actions.appendChild(loadBtn); actions.appendChild(delBtn);
+
+      row.appendChild(info); row.appendChild(actions);
+      els.libraryList.appendChild(row);
+    });
+  }
+
+  els.librarySaveBtn.addEventListener('click', () => {
+    if (!currentRawText.trim()) return;
+    const list = loadLibrary();
+    list.push({
+      id: Date.now(),
+      title: els.librarySaveTitle.value.trim(),
+      text: currentRawText,
+      savedAt: Date.now()
+    });
+    if (list.length > 40) list.shift();
+    saveLibrary(list);
+    els.librarySaveTitle.value = '';
+    renderLibrary();
+  });
+
+  // ---------- korben.info article list ----------
+  // Browsers block cross-origin fetch() unless the server opts in (CORS).
+  // korben.info's feed sends Access-Control-Allow-Origin: https://korben.info,
+  // which pins CORS to its own origin — a direct fetch from this page can
+  // never satisfy that, so we go straight through two public read-only CORS
+  // proxies instead (both of which reply with a permissive ACAO header).
+  // Nothing here ever touches Claude — it all runs locally, in this page.
+  const KORBEN_FEED = 'https://korben.info/feed';
+  const KORBEN_PROXIES = [
+    'https://api.allorigins.win/raw?url=',
+    'https://corsproxy.io/?url='
+  ];
+  const KORBEN_CACHE_KEY = 'vitesse_korben_cache';
+  const KORBEN_CACHE_TTL = 30 * 60 * 1000;
+
+  async function fetchKorbenFeedText(){
+    let lastError = null;
+    for (const proxy of KORBEN_PROXIES){
+      const url = proxy + encodeURIComponent(KORBEN_FEED);
+      try{
+        els.korbenStatus.textContent = 'tentative via un proxy…';
+        const opts = {};
+        if (typeof AbortSignal !== 'undefined' && AbortSignal.timeout) opts.signal = AbortSignal.timeout(10000);
+        const res = await fetch(url, opts);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        if (!text || text.length < 200) throw new Error('réponse vide');
+        return text;
+      }catch(e){
+        lastError = e;
+      }
+    }
+    throw lastError || new Error('échec du chargement');
+  }
+
+  // Parses HTML in an inert document (DOMParser never runs scripts or loads
+  // images from it, unlike setting innerHTML on a real element) so stripping
+  // tags from fetched article content can't execute anything it might contain.
+  function stripHtmlToText(html){
+    if (!html) return '';
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    doc.querySelectorAll('script, style, iframe, noscript, figure').forEach(el => el.remove());
+    doc.querySelectorAll('p, br, div, li, h1, h2, h3, h4, h5, h6, blockquote').forEach(el => {
+      el.after(doc.createTextNode(' '));
+    });
+    const text = doc.body ? doc.body.textContent : '';
+    return text.replace(/\s+/g, ' ').trim();
+  }
+
+  function parseKorbenXML(xmlText){
+    const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
+    if (doc.querySelector('parsererror')) throw new Error('flux illisible');
+    const items = Array.from(doc.querySelectorAll('item'));
+    return items.map(item => {
+      const get = (tag) => { const el = item.getElementsByTagName(tag)[0]; return el ? el.textContent : ''; };
+      const title = get('title');
+      const link = get('link');
+      const pubDate = get('pubDate');
+      const contentHtml = get('content:encoded') || get('description');
+      const excerpt = stripHtmlToText(get('description')).slice(0, 160);
+      return { title, link, pubDate, contentHtml, excerpt };
+    }).filter(it => it.title && it.contentHtml);
+  }
+
+  function formatKorbenDate(pubDateStr){
+    const d = new Date(pubDateStr);
+    if (isNaN(d)) return '';
+    return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function readKorbenCache(){
+    try{
+      const raw = JSON.parse(localStorage.getItem(KORBEN_CACHE_KEY) || 'null');
+      if (!raw || !Array.isArray(raw.items) || !Number.isFinite(raw.fetchedAt)) return null;
+      if (Date.now() - raw.fetchedAt > KORBEN_CACHE_TTL) return null;
+      return raw;
+    }catch(e){ return null; }
+  }
+  function writeKorbenCache(items){
+    try{ localStorage.setItem(KORBEN_CACHE_KEY, JSON.stringify({ items, fetchedAt: Date.now() })); }
+    catch(e){ /* storage full or unavailable: skip caching silently */ }
+  }
+
+  function renderKorbenList(items){
+    els.korbenCount.textContent = items.length ? `(${items.length})` : '';
+    els.korbenList.innerHTML = '';
+    if (items.length === 0){
+      const empty = document.createElement('div');
+      empty.className = 'korben-empty';
+      empty.textContent = 'aucun article trouvé';
+      els.korbenList.appendChild(empty);
+      return;
+    }
+    items.forEach(item => {
+      const btn = document.createElement('button');
+      btn.className = 'korben-item';
+      btn.type = 'button';
+
+      const title = document.createElement('div');
+      title.className = 'ki-title';
+      title.textContent = item.title;
+
+      const meta = document.createElement('div');
+      meta.className = 'ki-meta';
+      meta.textContent = formatKorbenDate(item.pubDate);
+
+      const excerpt = document.createElement('div');
+      excerpt.className = 'ki-excerpt';
+      excerpt.textContent = item.excerpt;
+
+      btn.appendChild(title); btn.appendChild(meta); btn.appendChild(excerpt);
+      btn.addEventListener('click', () => openKorbenArticle(item));
+      els.korbenList.appendChild(btn);
+    });
+  }
+
+  function openKorbenArticle(item){
+    const text = stripHtmlToText(item.contentHtml);
+    if (!text){
+      els.korbenStatus.textContent = 'cet article semble vide, impossible à charger';
+      return;
+    }
+    els.pasteArea.value = '';
+    loadText(text);
+    currentSourceTitle = item.title;
+    currentSourceLink = item.link || '';
+    els.korbenSourceNote.hidden = false;
+    els.korbenSourceText.textContent = currentSourceTitle;
+    els.korbenSourceLink.href = currentSourceLink || 'https://korben.info';
+    els.korbenDetails.open = false;
+    els.stage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    saveProgress(true);
+  }
+
+  async function loadKorbenFeed(forceRefresh){
+    if (!forceRefresh){
+      const cached = readKorbenCache();
+      if (cached){
+        renderKorbenList(cached.items);
+        els.korbenStatus.textContent = `${cached.items.length} articles · ${timeAgoLabel(cached.fetchedAt)}`;
+        return;
+      }
+    }
+    els.korbenList.innerHTML = '';
+    els.korbenStatus.textContent = 'chargement…';
+    els.korbenRefreshBtn.disabled = true;
+    try{
+      const xmlText = await fetchKorbenFeedText();
+      const items = parseKorbenXML(xmlText).slice(0, 25);
+      if (items.length === 0) throw new Error('aucun article trouvé dans le flux');
+      writeKorbenCache(items);
+      renderKorbenList(items);
+      els.korbenStatus.textContent = `${items.length} articles chargés`;
+    }catch(e){
+      els.korbenList.innerHTML = '';
+      const msg = document.createElement('div');
+      msg.className = 'korben-empty';
+      msg.textContent = 'Impossible de charger les articles (bloqué par korben.info ou par les proxys de secours, ou bien hors-ligne). Réessayez plus tard avec "Actualiser", ou collez un texte manuellement plus bas.';
+      els.korbenList.appendChild(msg);
+      els.korbenStatus.textContent = 'échec du chargement';
+    }finally{
+      els.korbenRefreshBtn.disabled = false;
+    }
+  }
+
+  els.korbenRefreshBtn.addEventListener('click', () => loadKorbenFeed(true));
+  if (els.korbenDetails.open) loadKorbenFeed(false);
+
+  // ---------- touch gestures on the stage ----------
+  let touchStartX = null, touchStartY = null, touchStartT = 0;
+
+  els.stage.addEventListener('touchstart', (e) => {
+    const t = e.changedTouches[0];
+    touchStartX = t.clientX; touchStartY = t.clientY; touchStartT = Date.now();
+  }, { passive: true });
+
+  els.stage.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - touchStartX;
+    const dy = t.clientY - touchStartY;
+    const dt = Date.now() - touchStartT;
+    touchStartX = null;
+
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5){
+      dx < 0 ? jumpSentence(1) : jumpSentence(-1);
+    } else if (dt < 350 && Math.abs(dx) < 20 && Math.abs(dy) < 20){
+      togglePlay();
+    }
+  });
+
+  let hintShown = false;
+  function checkOrientation(){
+    const isImmersive = window.matchMedia('(orientation: landscape) and (max-height: 520px)').matches;
+    if (isImmersive && !hintShown && sentences.length){
+      hintShown = true;
+      document.body.classList.add('show-hint');
+      setTimeout(() => document.body.classList.remove('show-hint'), 3200);
+    }
+  }
+  window.addEventListener('orientationchange', () => setTimeout(checkOrientation, 200));
+  window.addEventListener('resize', checkOrientation);
+
+  // ---------- events ----------
+  els.playBtn.addEventListener('click', togglePlay);
+  els.backBtn.addEventListener('click', () => jumpSentence(-1));
+  els.fwdBtn.addEventListener('click', () => jumpSentence(1));
+  els.wordBackBtn.addEventListener('click', () => stepWord(-1));
+  els.wordFwdBtn.addEventListener('click', () => stepWord(1));
+  els.slowerBtn.addEventListener('click', () => changeSpeed(-10));
+  els.fasterBtn.addEventListener('click', () => changeSpeed(10));
+  els.resetBtn.addEventListener('click', () => {
+    pause();
+    sIdx = 0;
+    if (sentences.length){
+      wIdx = 0;
+      wordsConsumed = 1;
+      showWord(sentences[0][0]);
+    } else {
+      wIdx = -1;
+      wordsConsumed = 0;
+    }
+    updateMeta();
+    saveProgress(true);
+  });
+
+  els.fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => loadText(ev.target.result);
+    reader.readAsText(file, 'utf-8');
+  });
+
+  els.loadPasteBtn.addEventListener('click', () => loadText(els.pasteArea.value));
+
+  els.pasteArea.addEventListener('paste', () => {
+    setTimeout(() => loadText(els.pasteArea.value), 0);
+  });
+
+  els.pasteArea.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.ctrlKey){
+      loadText(els.pasteArea.value);
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (document.activeElement === els.pasteArea || document.activeElement === els.librarySaveTitle) return;
+    switch(e.key){
+      case ' ': e.preventDefault(); togglePlay(); break;
+      case 'ArrowLeft': e.shiftKey ? stepWord(-1) : jumpSentence(-1); break;
+      case 'ArrowRight': e.shiftKey ? stepWord(1) : jumpSentence(1); break;
+      case 'ArrowUp': e.preventDefault(); changeSpeed(10); break;
+      case 'ArrowDown': e.preventDefault(); changeSpeed(-10); break;
+    }
+  });
+
+  window.addEventListener('beforeunload', () => saveProgress(true));
+  document.addEventListener('visibilitychange', () => { if (document.hidden) saveProgress(true); });
+
+  // ---------- manifest (PWA install + share target), built at runtime to avoid data-URI escaping issues ----------
+  const manifest = {
+    name: "Vitesse — lecteur rapide",
+    short_name: "Vitesse",
+    display: "standalone",
+    start_url: ".",
+    background_color: "#12111a",
+    theme_color: "#12111a",
+    orientation: "any",
+    icons: [
+      { src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAADyklEQVR42u3d3XHTQBSGYXmHBpLLdEEZVEMtVEMZtMQFMwljByP/SNrvnOe9YriInd1Hu5KQ8en15W2R7m0YAgEkgASQAJIAEkACSABJAAkgASSAJIAEkAASQBJAAkgAKbgvhuBKP398ff/zt++/DIgVSAAJIAEkASSABJAAEkASQAJIAAkgaVUn/8WdrEACSAAJIOm2PNL60d8PsF7P462uwm7gghRAW7khqQugrd20lVQc0E1u1k/5Rj8WoDA6z5raPV8LoIPpbD2Rx746QFtN3v4zN9WbASh1tsozqgDoX5M0zwzN/w77Avp0buacmKC32gJQ6HwUY5QK6HIasuYg/f2/N+g5pMs3vP+98qaAyhy7NQyFbWFnQ1zjSjj6lxoGeralKGsdGvQwVB9QbT3RhgY9DFUG1EdPqKFBD0M1AfXUE2doJA5oQ0MAPbT8aNoBGfMPVtuPXEVsZIMehsqeA/kE8fyDMBcgpz5xQzQceRahIoAsP4kDNRxzFqEKgCw/ocM1HG0WoXhAlp/cQRuOM4tQzct4RXQ8IN/NfvciNMMuZgUSQGoLyP6VvotZgQSQegJy/7DAMM6yAjkBCh0uW5gA0nH5uqe1JxY2WYAeOif98/cYzbKFzXkL8b9XNPNcOU5yO9E50M043H0A6FEWDAEkgA5afixCAAkgASSABJAE0IPdcSvcv2kAJIAOWoQsPwDdz4KeKQDN9gnLlTjmfHDgwHfleaDPiXigDKC9r8tsYRJA6gnI0xGhw3UkIOcZBYbRFiaA1BbQnLcTg06ADj8NsAIJIHUGZBfL3b+sQCoHyCKUNThTAHJHMXfQhuPM8lMBkEUodLiGo83yUwSQRShxoIZjzvJTB5BFKG6IhiPP8lMK0NkR1tzQ2a/vKy8ZKqVn3i3MyVDKgIzEY9GpD0A2svjNK2AF6mkoSE/AFtbNUJaejHOgPobi9MScRHcwlKhnCXqktbahUD1L1jPRVQ3l6lmW5fT68hY93EvyXccCv0vepzIuhzh0KapxJER+rKeAoTLraN4Wdh3N/NMQ+rYLAoqbj2J0igC6sn/N/12+BR46qADo+jnQsZM07RsDaPbZKk+nIKA1V2RbT96xrw7QThP53Onc87UAmo7RHXO80Y8FqIikp9Tkse4ugHaT1O3jAO0AbSSp7cdI+gJ6hJRPHQGk5+Q/2RRAAkgAqWO+M3XtdZkrLyuQABJAAkgCSAAJIAEkgCSABJAAEkDS2jzSKiuQABJAAkgCSAAJIAEkASSABJAAkgASQAJIAEkACSABJIDUtt/l5bQtjqkQmgAAAABJRU5ErkJggg==", sizes: "192x192", type: "image/png", purpose: "any maskable" },
+      { src: "data:image/png;base64,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", sizes: "512x512", type: "image/png", purpose: "any maskable" }
+    ],
+    share_target: { action: ".", method: "GET", params: { title: "title", text: "text", url: "url" } }
+  };
+  const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
+  document.getElementById('manifestLink').href = URL.createObjectURL(manifestBlob);
+
+  // ---------- init: shared text (from the OS share sheet) takes priority, then resume ----------
+  const params = new URLSearchParams(window.location.search);
+  const sharedText = params.get('text') || params.get('url') || '';
+  if (sharedText){
+    els.pasteArea.value = sharedText;
+    loadText(sharedText);
+    history.replaceState({}, '', window.location.pathname);
+  } else {
+    checkResume();
+  }
+
+  renderLibrary();
+  els.librarySaveBtn.disabled = !currentRawText.trim();
+
+})();
+</script>
+
+</body>
+</html>
